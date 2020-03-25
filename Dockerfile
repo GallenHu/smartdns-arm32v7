@@ -6,7 +6,7 @@ ENV VERSION Release30
 
 RUN apk --no-cache add wget \
     && cd /home \
-    && wget -qO- https://github.com/pymumu/smartdns/releases/download/${VERSION}/smartdns-arm
+    && wget -qO- https://github.com/pymumu/smartdns/releases/download/${VERSION}/smartdns-arm \
     && chmod +x smartdns-arm
 
 ADD smartdns.conf /home/smartdns.conf
