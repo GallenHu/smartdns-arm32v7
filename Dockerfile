@@ -7,7 +7,7 @@ ENV VERSION Release30
 RUN apt-get update \
     && apt-get install wget -y \
     && cd /home \
-    && wget -qO- https://github.com/pymumu/smartdns/releases/download/${VERSION}/smartdns-arm \
+    && wget --no-check-certificate https://github.com/pymumu/smartdns/releases/download/${VERSION}/smartdns-arm \
     && chmod +x smartdns-arm
 
 ADD smartdns.conf /home/smartdns.conf
