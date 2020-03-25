@@ -4,7 +4,8 @@ WORKDIR /home
 
 ENV VERSION Release30
 
-RUN apk --no-cache add wget \
+RUN apt-get update \
+    && apt-get install wget -y \
     && cd /home \
     && wget -qO- https://github.com/pymumu/smartdns/releases/download/${VERSION}/smartdns-arm \
     && chmod +x smartdns-arm
